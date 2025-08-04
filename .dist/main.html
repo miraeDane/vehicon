@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>VehiCon - Monitor, Maintain, Move</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <img src="assets/logo.png" class="logo">
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#" onclick="showSection('home')" class="active">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('services')">Services</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact us</a></li>
+        </ul>
+        <div class="mobile-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="section active" id="home">
+        <div class="container">
+            <div class="home-content">
+                <div class="text-content">
+                    <div class="tagline">Monitor • Maintain • Move</div>
+                    <h1>VehiCon</h1>
+                    <p class="description">Boost your vehicle's health. Ride with peace of mind and confidence.</p>
+                    <a href="#" class="cta-button" onclick="showSection('services')">Learn More</a>
+                </div>
+                <div class="car-image">
+                    <svg class="car-silhouette" viewBox="0 0 400 200" fill="none">
+                        <path d="M50 150 L80 120 L120 110 L280 110 L320 120 L350 150 L350 170 L320 170 L320 160 L300 160 L300 170 L100 170 L100 160 L80 160 L80 170 L50 170 Z" fill="url(#carGradient)"/>
+                        <circle cx="120" cy="160" r="20" fill="#333"/>
+                        <circle cx="280" cy="160" r="20" fill="#333"/>
+                        <circle cx="120" cy="160" r="15" fill="url(#wheelGradient)"/>
+                        <circle cx="280" cy="160" r="15" fill="url(#wheelGradient)"/>
+                        <path d="M120 120 L150 115 L250 115 L280 120 L280 140 L120 140 Z" fill="rgba(0,204,204,0.3)"/>
+                        <defs>
+                            <linearGradient id="carGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#333;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#111;stop-opacity:1" />
+                            </linearGradient>
+                            <radialGradient id="wheelGradient">
+                                <stop offset="0%" style="stop-color:#00cccc;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#004d4d;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="services-content">
+                <h2>Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">✓</div>
+                        <h3>Real-time Health Dashboard</h3>
+                        <p>Engine performance, battery voltage, oil status, temperature monitoring</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚙</div>
+                        <h3>Maintenance Reminders</h3>
+                        <p>Schedule oil changes, tire rotations, brake inspections</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📍</div>
+                        <h3>Nearby Mechanic Locator</h3>
+                        <p>Find the nearest vetted auto shops</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p>Vehicon is a modern car health monitoring application designed to help car owners track, maintain, and understand their vehicle's status in real-time. It's built to improve vehicle longevity, prevent breakdowns, and give users peace of mind while driving.</p>
+                </div>
+                <div class="car-image">
+                    <svg class="car-silhouette" viewBox="0 0 400 200" fill="none">
+                        <path d="M50 150 L80 120 L120 110 L280 110 L320 120 L350 150 L350 170 L320 170 L320 160 L300 160 L300 170 L100 170 L100 160 L80 160 L80 170 L50 170 Z" fill="url(#carGradient2)"/>
+                        <circle cx="120" cy="160" r="20" fill="#333"/>
+                        <circle cx="280" cy="160" r="20" fill="#333"/>
+                        <circle cx="120" cy="160" r="15" fill="url(#wheelGradient2)"/>
+                        <circle cx="280" cy="160" r="15" fill="url(#wheelGradient2)"/>
+                        <path d="M120 120 L150 115 L250 115 L280 120 L280 140 L120 140 Z" fill="rgba(0,204,204,0.3)"/>
+                        <defs>
+                            <linearGradient id="carGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#333;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#111;stop-opacity:1" />
+                            </linearGradient>
+                            <radialGradient id="wheelGradient2">
+                                <stop offset="0%" style="stop-color:#00cccc;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#004d4d;stop-opacity:1" />
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="services-content">
+                <h2>Contact Us</h2>
+                <p style="font-size: 1.2em; margin-bottom: 40px; color: #b3ffff;">Get in touch with our team for support and inquiries</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>rizaldomarymae8@gmail.com</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📞</div>
+                        <h3>Phone</h3>
+                        <p>+639945186807</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏢</div>
+                        <h3>Office</h3>
+                        <p>12345 Cebu City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionName) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            document.getElementById(sectionName).classList.add('active');
+
+            // Update active nav link
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            event.target.classList.add('active');
+
+            // Close mobile menu if open
+            document.getElementById('navLinks').classList.remove('active');
+        }
+
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(0, 26, 26, 0.9)';
+            } else {
+                nav.style.background = 'rgba(0, 26, 26, 0.3)';
+            }
+        });
+    </script>
+</body>
+</html>
